@@ -31,24 +31,47 @@ class NavigationComponent extends React.Component
           });
         }
 
+
+ 
+    getStyle  = () => {
+          return{
+            background: 'white',
+            color: '#000000',
+            
+
+            overflow: 'hidden',
+         //   backgroundcolor: '#f1f1f1',
+          //  padding: '90px 10px, /* Large padding which will shrink on scroll (using JS) */
+           // transition: '0.4s', /* Adds a transition effect when the padding is decreased */
+            position: 'fixed', /* Sticky/fixed navbar */
+            width: '100%',
+            //top: '0', /* At the top */
+            // z-index: '99'
+          }
+        }
+      
+
+
+
     render() 
     {
         return (
 
           <div className="NavBar">
-            <Navbar color="light" light expand="md">
-              <NavbarBrand href="/">CH Technology Solutions</NavbarBrand>  
+             
+              <Navbar color="light" light expand="md" style = {this.getStyle()}>
+           
+              <NavbarBrand href="/">CH Technology</NavbarBrand>  
               <NavbarToggler onClick={this.toggle} />
+              
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                <NavItem>
-                    <NavLink href="/Home">Home</NavLink>
+                
+                  <NavItem>
+                    <NavLink href="/About" >About</NavLink>
                   </NavItem>
                   <NavItem>
-                    <NavLink href="/About">About</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/Portfolio">Portfolio</NavLink>
+                    <NavLink href="/Portfolio" >Portfolio</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/WebDevelopment">Web Development</NavLink>

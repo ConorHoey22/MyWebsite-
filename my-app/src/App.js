@@ -1,5 +1,5 @@
 import React from 'react';
-import logoy from './homepage-Laptop.jpg';
+
 import './App.css';
 import { Button } from 'reactstrap';
 
@@ -7,7 +7,12 @@ import { Button } from 'reactstrap';
 
 //----------------------Component Imports--------------------------------------
 import NavigationComponent from './components/NavigationComponent';
-
+import FooterComponent from './components/FooterComponent';
+import About from './components/views/About';
+import Contact from './components/views/Contact';
+import Portfolio from './components/views/Portfolio';
+import WebDev from './components/views/WebDev';
+import Welcome from './components/Welcome';
 
 //-----------------------Router Imports----------------------------------------
 import {
@@ -26,53 +31,46 @@ class App extends React.Component
   constructor(props) {
     super(props);
   
+  
 
   }
   render() {
   return (
     <div className="App">
      <NavigationComponent/>
+
+
+     
+     <Router>
+     
+     <Switch>
+         {/* <Route exact path="/" component={} /> */}
+         <Route  path="/Welcome" component={Welcome} /> 
+          <Route path="/About" component={About} />
+         <Route path="/Portfolio"   component={Portfolio} />
+         <Route path="/WebDev"  component={WebDev} />
+         <Route path="/Contact"  component={Contact} />
+         
+     </Switch>
+
+    </Router>  
+
       <header className="App-header">
-      <div className = "image">
-
-        <p>
-          CH Technology Solutions
-        </p>
-
-       </div>
-        
-          
-  <div class="container">
-    <div class = "row">
-      <div class="col-sm">
-      Services
-      </div>
-  </div>
-    <div class="row">
-      <div class="col-sm">
-      <a className= "webServices">
-            Web Development
-            </a>
-            <br></br>
-            <Button>Click Here</Button>
-      </div>
-    <div class="col-sm">
-    <a className= "GraphicContainer">
-        Graphic Design
-        </a>
-        <br></br>
-        <Button>Click here</Button>
-    </div>
   
-  </div>
-</div>
-
 
 
 
 
 
       </header>
+
+
+
+
+      <div className = "App-footer">
+        <FooterComponent/>
+      </div>
+
     </div>
  );
 }
