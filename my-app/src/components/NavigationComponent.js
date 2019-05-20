@@ -39,14 +39,14 @@ class NavigationComponent extends React.Component
             color: '#000000',
             
 
-            overflow: 'hidden',
+           // overflow: 'hidden',
          //   backgroundcolor: '#f1f1f1',
-          //  padding: '90px 10px, /* Large padding which will shrink on scroll (using JS) */
-           // transition: '0.4s', /* Adds a transition effect when the padding is decreased */
+          // padding: '90px 10px', /* Large padding which will shrink on scroll (using JS) */
+          // transition: '0.4s', /* Adds a transition effect when the padding is decreased */
             position: 'fixed', /* Sticky/fixed navbar */
             width: '100%',
             //top: '0', /* At the top */
-            // z-index: '99'
+             //zindex: '99'
           }
         }
       

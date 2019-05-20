@@ -1,8 +1,20 @@
 import React from 'react';
 
 import './App.css';
+
 import { Button } from 'reactstrap';
 
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+  IndexRoute ,
+  Redirect, 
+  
+
+} from 'react-router-dom'
 
 
 //----------------------Component Imports--------------------------------------
@@ -15,15 +27,7 @@ import WebDev from './components/views/WebDev';
 import Welcome from './components/Welcome';
 
 //-----------------------Router Imports----------------------------------------
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  IndexRoute ,
-  Redirect, 
 
-} from 'react-router-dom'
 
 
 class App extends React.Component
@@ -58,8 +62,7 @@ class App extends React.Component
       <header className="App-header">
   
 
-
-
+ 
 
 
       </header>
