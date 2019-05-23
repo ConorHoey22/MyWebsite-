@@ -17,8 +17,7 @@ Welcome.js contains inline styles however media queries can be found within welc
 
 
 
-
-----NPM Commands ----
+## NPM Commands
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

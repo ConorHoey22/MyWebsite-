@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-import facebookLogo from './f_logo_RGB-Black_58.png';
-import instagramlogo from './instagramlogo.png';
-import twitterlogo from './twitterlogo.png';
-import linkedinlogo from './linkedinlogo.png';
+
 
 import { Table } from 'reactstrap';
 
@@ -18,9 +15,12 @@ class FooterComponent extends React.Component
    getContainerStyle  = () => {
       return{
           position: 'fixed-bottom',
-          border:'3px solid black',
+   
+ 
+          // margin: '0px',
+
+          fontsize: '1px',
           backgroundColor: '#ffffff',
-          margin: '0px',
         
       
         
@@ -30,10 +30,10 @@ class FooterComponent extends React.Component
   getFBLogoStyle  = () => {
     return{
 
-      position: 'fixed-bottom',
-      top: '720px',
-      bottom: '500px',
-      left: '200px',
+      position: 'absolute',
+      top: '650px',
+      bottom: '200px',
+      left: '550px',
       right: '10px',
   
     }
@@ -42,10 +42,11 @@ class FooterComponent extends React.Component
   getTwitterLogoStyle  = () => {
     return{
 
-      position: 'fixed-bottom',
-      top: '720px',
-      bottom: '500px',
-      left: '500px',
+  
+      position: 'absolute',
+      top: '650px',
+      bottom: '200px',
+      left: '610px',
       right: '10px',
   
     }
@@ -54,9 +55,10 @@ class FooterComponent extends React.Component
   getInstaLogoStyle  = () => {
     return{
 
+
       position: 'fixed-bottom',
-      top: '720px',
-      bottom: '200px',
+      top: '545px',
+      bottom: '900px',
       left: '700px',
       right: '10px',
   
@@ -68,11 +70,10 @@ class FooterComponent extends React.Component
     return{
 
       position: 'fixed-bottom',
-      top: '720px',
-      bottom: '100px',
-      left: '300px',
+      top: '559px',
+      bottom: '200px',
+      left: '800px',
       right: '10px',
-  
     }
   }
 
@@ -82,15 +83,53 @@ class FooterComponent extends React.Component
     render() 
     {
         return (
+<div className = "footer" style = {this.getContainerStyle()}>
 
-      <Table style = {this.getContainerStyle()}> 
-              
-         <th><img src = {facebookLogo} width = "34px" id = "facebookLogo" style = {this.getFBLogoStyle()}></img> </th>
-         <th><img src = {twitterlogo} width = "34px" id = "twitterLogo" style = {this.getTwitterLogoStyle()}></img></th>
-         <th><img src = {instagramlogo} width = "34px" id = "instagramlogo" style = {this.getInstaLogoStyle()}></img></th>
-         <th><img src = {linkedinlogo} width = "50px" id = "linkedinlogo" style = {this.getlinkedinLogoStyle()}></img></th>
-                
-      </Table>
+     <div className = "contactLinks">
+
+     <Table>
+  <thead>
+    <tr>
+      <th class = "text-left">Follow us!</th>
+      <th class = "text-right">Contact us!</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+
+      <td class = "text-left"><i class="fab fa-facebook fa-2x" href =""></i> Facebook   &nbsp;&nbsp;&nbsp;&nbsp;    
+      <i class="fab fa-twitter fa-2x" href =""></i> Twitter   
+      <br></br> 
+      <br></br>
+      <i class="fab fa-instagram fa-2x" href =""></i> Instagram &nbsp;&nbsp;&nbsp;&nbsp;   
+      <i class="fab fa-linkedin fa-2x" href =""> </i> Linkedin
+
+        
+      </td>
+      <td class = "text-right">Need a website or have an app idea? 
+      <br></br> 
+      <br></br>
+      Send us a message one of our social medias or by email!
+      <br></br> 
+      <br></br>
+      <i class="fas fa-envelope fa-2x"></i> CHTech@outlook.com</td>
+    </tr>
+
+  </tbody>
+</Table>
+
+    </div>
+
+      <div className = "footerContent" style = {this.getContainerStyle()}>
+{/* MAY NEED  UPDATE THESE DETIALs , rights etc , need to research */}
+          <p>© 2019 CH Technology - All Rights Reserved </p>
+
+          <p>Made By ***, registered as a company in the United Kingdom, company registration number ******</p>     
+      </div>
+
+  </div>
+
 
       );
     }

@@ -4,29 +4,25 @@ import './App.css';
 
 import { Button } from 'reactstrap';
 
+import ReactDOM from 'react-dom';
 
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Switch,
-  IndexRoute ,
   Redirect, 
-  
-
 } from 'react-router-dom'
 
 
 //----------------------Component Imports--------------------------------------
 import NavigationComponent from './components/NavigationComponent';
 import FooterComponent from './components/FooterComponent';
-import About from './components/views/About';
-import Contact from './components/views/Contact';
-import Portfolio from './components/views/Portfolio';
-import WebDev from './components/views/WebDev';
+import About from './components/About';
+import Contact from './components/Contact';
+import Portfolio from './components/Portfolio';
+import WebDev from './components/WebDev';
 import Welcome from './components/Welcome';
-
-//-----------------------Router Imports----------------------------------------
 
 
 
@@ -35,48 +31,61 @@ class App extends React.Component
   constructor(props) {
     super(props);
   
+  }
+
+
+
+
+  
   
 
-  }
   render() {
   return (
     <div className="App">
+     {/* <NavigationComponent/> */}
+
+
      <NavigationComponent/>
 
 
-     
-     <Router>
-     
-     <Switch>
-         {/* <Route exact path="/" component={} /> */}
-         <Route  path="/Welcome" component={Welcome} /> 
-          <Route path="/About" component={About} />
-         <Route path="/Portfolio"   component={Portfolio} />
-         <Route path="/WebDev"  component={WebDev} />
-         <Route path="/Contact"  component={Contact} />
-         
-     </Switch>
+           
 
-    </Router>  
 
-      <header className="App-header">
-  
+       <header className="App-header"> 
+       <Router>
 
+<Switch>
+  <Route exact path="/" component={Welcome}/>
+  <Route path="/About"   component={About}/>
+  <Route path="/Portfolio"   component={Portfolio}/>
+  <Route path="/WebDev"  component={WebDev}/>
+  <Route path="/Contact"  component={Contact}/> 
+</Switch>
+
+</Router>
+       </header> 
+       
  
-
-
-      </header>
-
-
-
 
       <div className = "App-footer">
         <FooterComponent/>
       </div>
 
     </div>
+
+
+
+
+
+
  );
 }
+
+
+
 }
+
+
+
 
 export default App;

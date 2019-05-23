@@ -7,16 +7,13 @@ import './welcomePage.css';
 // bugs
 //Content goes on to the Nav bar on scroll should be underneath it 
 
-
-
-
-
 import { Button } from 'reactstrap';
+
+// This is the homepage. This should be the first website - Welcome Component
 class Welcome extends React.Component
 {
   constructor(props) {
     super(props);
-  
 
   }
 
@@ -30,7 +27,6 @@ getBackground  = () => {
 getContainerStyle  = () => {
     return{
         display: 'flex',
-    
     }
 }
 
@@ -50,7 +46,7 @@ getImageText = () => {
     width: '30%',
     height: '60%',
  
-    }
+  }
 
 
 }  
@@ -69,15 +65,14 @@ getImageStyle = () => {
   render() {
   return (
 
-     <div className = "welcomeImage" style = {this.getContainerStyle()}>
+     <div className = "welcomeImage"  id = "welcome" style = {this.getContainerStyle()}>
        <img src = {image}   style = {this.getImageStyle()}></img>
       
-          
           <div className="text" style = {this.getImageText()}>
     
                <h3 id = "companyName">CH Technology</h3>
                {/* Include Logo here better text image */}
-               <p>Web development</p>
+               <h4>Web Development</h4>
                <p>Design, Development, Testing</p>
                <p>You are involved in each phase!</p>
               
@@ -89,21 +84,6 @@ getImageStyle = () => {
          </div>
 
      </div>
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
  );
 }
 }
