@@ -1,140 +1,96 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 
 import { Table } from 'reactstrap';
-
-class FooterComponent extends React.Component
- {
-    constructor(props) 
-    {
-        super(props);
-
-    }
-
-
-   getContainerStyle  = () => {
-      return{
-          position: 'fixed-bottom',
-   
- 
-          // margin: '0px',
-
-          fontsize: '1px',
-          backgroundColor: '#ffffff',
-        
-      
-        
-      }
+import './footer.css';
+class FooterComponent extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
-  getFBLogoStyle  = () => {
-    return{
-
-      position: 'absolute',
-      top: '650px',
-      bottom: '200px',
-      left: '550px',
-      right: '10px',
-  
-    }
-  }
-
-  getTwitterLogoStyle  = () => {
-    return{
-
-  
-      position: 'absolute',
-      top: '650px',
-      bottom: '200px',
-      left: '610px',
-      right: '10px',
-  
-    }
-  }
-  
-  getInstaLogoStyle  = () => {
-    return{
-
-
+  getContainerStyle = () => {
+    return {
       position: 'fixed-bottom',
-      top: '545px',
-      bottom: '900px',
-      left: '700px',
-      right: '10px',
-  
-    }
-  }
 
-  
-  getlinkedinLogoStyle  = () => {
-    return{
+      backgroundColor: '#23222e',
+      color: '#66fcf1',
+      width: '100%',
+      height: '100%'
+    };
+  };
 
-      position: 'fixed-bottom',
-      top: '559px',
-      bottom: '200px',
-      left: '800px',
-      right: '10px',
-    }
-  }
+  getStyle = () => {
+    return {
+      // width: '100%',
+      //height: '1px',
+      padding: '1px',
+      margin: '1px',
+      fontSize: '15px'
+    };
+  };
 
+  render() {
+    return (
+      <div className='footer' style={this.getContainerStyle()}>
+        <div className='contactLinks' style={this.getContainerStyle()}>
+          <Table style={this.getContainerStyle()}>
+            <thead style={this.getStyle()}>
+              <tr style={this.getStyle()}>
+                <th className='text-left' style={this.getStyle()}>
+                  <p> &nbsp;&nbsp;&nbsp;Follow us!</p>
+                </th>
+                <th className='text-right' style={this.getStyle()}>
+                  <p> Contact us! &nbsp;&nbsp;&nbsp;</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody style={this.getContainerStyle()}>
+              <tr>
+                <td className='text-left' id='text-left'>
+                  <p>
+                    <i
+                      className='fab fa-facebook fa-2x'
+                      id='facebook'
+                      href=''
+                    />
+                    &nbsp;&nbsp;&nbsp; Facebook
+                  </p>
 
+                  <p>
+                    <i className='fab fa-twitter fa-2x' href='' />{' '}
+                    &nbsp;&nbsp;&nbsp; Twitter
+                  </p>
+                  <p>
+                    <i className='fab fa-instagram fa-2x' href='' />{' '}
+                    &nbsp;&nbsp;&nbsp; Instagram
+                  </p>
+                  <p>
+                    <i className='fab fa-linkedin fa-2x' href='' />{' '}
+                    &nbsp;&nbsp;&nbsp; Linkedin
+                  </p>
+                </td>
 
+                <td className='text-right'>
+                  Need a website or have an app idea?
+                  <br />
+                  <br />
+                  Send us a message to one of our social medias or send us an
+                  email!
+                  <br />
+                  <br />
+                  <i className='fas fa-envelope fa-2x' /> CHTech@outlook.com
+                </td>
+              </tr>
+            </tbody>
+          </Table>
 
-    render() 
-    {
-        return (
-<div className = "footer" style = {this.getContainerStyle()}>
-
-     <div className = "contactLinks">
-
-     <Table>
-  <thead>
-    <tr>
-      <th class = "text-left">Follow us!</th>
-      <th class = "text-right">Contact us!</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-
-      <td class = "text-left"><i class="fab fa-facebook fa-2x" href =""></i> Facebook   &nbsp;&nbsp;&nbsp;&nbsp;    
-      <i class="fab fa-twitter fa-2x" href =""></i> Twitter   
-      <br></br> 
-      <br></br>
-      <i class="fab fa-instagram fa-2x" href =""></i> Instagram &nbsp;&nbsp;&nbsp;&nbsp;   
-      <i class="fab fa-linkedin fa-2x" href =""> </i> Linkedin
-
-        
-      </td>
-      <td class = "text-right">Need a website or have an app idea? 
-      <br></br> 
-      <br></br>
-      Send us a message one of our social medias or by email!
-      <br></br> 
-      <br></br>
-      <i class="fas fa-envelope fa-2x"></i> CHTech@outlook.com</td>
-    </tr>
-
-  </tbody>
-</Table>
-
-    </div>
-
-      <div className = "footerContent" style = {this.getContainerStyle()}>
-{/* MAY NEED  UPDATE THESE DETIALs , rights etc , need to research */}
-          <p>© 2019 CH Technology - All Rights Reserved </p>
-
-          <p>Made By ***, registered as a company in the United Kingdom, company registration number ******</p>     
+          <div className='footerContent' style={this.getContainerStyle()}>
+            {/* MAY NEED  UPDATE THESE DETIALs , rights etc , need to research */}
+            <p>© 2019 CH Technology - All Rights Reserved</p>
+          </div>
+        </div>
       </div>
+    );
+  }
+}
 
-  </div>
-
-
-      );
-    }
- 
- }
-
-  
 export default FooterComponent;
