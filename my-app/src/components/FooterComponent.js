@@ -22,9 +22,13 @@ class FooterComponent extends React.Component {
     return {
       // width: '100%',
       //height: '1px',
+      // position: 'absolute',
+      // bottom: '-20%',
       padding: '1px',
       margin: '1px',
       fontSize: '15px'
+      // backgroundColor: 'black',
+      // width: '100%'
     };
   };
 
@@ -77,15 +81,15 @@ class FooterComponent extends React.Component {
                   email!
                   <br />
                   <br />
-                  <i className='fas fa-envelope fa-2x' /> CHTech@outlook.com
+                  <i className='fas fa-envelope fa-2x' /> hoeytech@outlook.com
                 </td>
               </tr>
             </tbody>
           </Table>
 
           <div className='footerContent' style={this.getContainerStyle()}>
-            {/* MAY NEED  UPDATE THESE DETIALs , rights etc , need to research */}
-            <p>© 2019 CH Technology - All Rights Reserved</p>
+            {/* MAY NEED  UPDATE THESE DETIALs , rig  */}
+            <p>© 2019 HoeyTech - All Rights Reserved</p>
           </div>
         </div>
       </div>

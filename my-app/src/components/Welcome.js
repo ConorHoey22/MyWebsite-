@@ -7,153 +7,104 @@ import './welcomePage.css';
 import { Button } from 'reactstrap';
 
 // This is the homepage. This should be the first website - Welcome Component
-class Welcome extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const Welcome = () => {
+  // constructor(props) {
+  // super(props);
+  // }
 
-  getBackground = () => {
-    return {
-      backgroundColor: '#001e4f'
-    };
-  };
-  getborder = () => {
-    return {
-      position: 'absolute',
-      top: '90%',
-      left: '10%',
-      border: '1px solid',
-      borderRadius: '20px',
-      borderColor: '#66fcf1',
-      height: '100px'
-    };
-  };
-  getTitle = () => {
-    return {
-      position: 'absolute',
-      fontWeight: 'bold',
-      top: '10px',
-      left: '100px',
-      color: '#c00000',
-      width: '100%',
-      height: '100%',
-      textAlign: 'left',
-      fontSize: '30px'
-    };
+  var getBackground = {
+    backgroundColor: '#001e4f'
   };
 
-  getInfo = () => {
-    return {
-      position: 'absolute',
-      fontWeight: 'bold',
-      top: '200px',
-      left: '100px',
-      color: '#000000',
-      width: '100%',
-      height: '100%',
-      textAlign: 'left',
-      fontSize: '15px'
-    };
+  var getButtonStyle = {
+    backgroundColor: '#23222e',
+    color: '#66fcf1'
   };
 
-  /*
-div#welcomeInfo.welcomeInfo.container {
-  position: absolute;
-  font-weight: bold;
-  font-size: 10px;
-  top: 130px;
-  left: 100px;
-  color: #c00000;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-}
-
-div#workflowInfo.workflowInfo.container {
-  position: absolute;
-  font-weight: bold;
-  font-size: 15px;
-  top: 200px;
-  left: 100px;
-  color: #000000;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-}
-
-nav {
-  z-index: 2;
-}
-
-    };
-  };*/
-
-  workflowTextStyle = () => {
-    return {
-      position: 'absolute',
-      top: '85%',
-      left: '1%',
-
-      textAlign: 'center',
-      fontSize: '12px'
-    };
+  var workflowTextStyle = {
+    position: 'absolute',
+    top: '60%',
+    left: '1%',
+    width: '50%',
+    textAlign: 'center',
+    fontSize: '12px'
   };
 
-  getStyle = () => {
-    return {
-      position: 'fixed',
-      top: '38.5%',
-      left: '90%',
-      objectFit: 'cover',
-      width: '100%',
-      height: ' 100%'
-    };
+  var getStyle = {
+    position: 'absolute',
+    top: '1%',
+    left: '0%',
+    width: '100%'
   };
 
-  render() {
-    return (
-      <div id='welcome' className='welcome'>
-        <img src={image} className='img-fluid' id='welcomeImage' />
+  return (
+    <div id='welcome' className='welcome'>
+      <img src={image} className='img-fluid' id='welcomeImage' />
 
-        <Container id='welcomeInfo' className='welcomeInfo'>
-          <h3 id='companyName' className='companyName'>
-            HoeyTech
-          </h3>
-        </Container>
-        <Container id='workflowInfo' className='workflowInfo'>
-          <p>Web Development </p>
-          <p>App Development </p>
-          <p>IT Consultancy Sessions</p>
+      <Container id='welcomeInfo' className='welcomeInfo'>
+        <h3 id='companyName' className='companyName'>
+          HoeyTech
+        </h3>
+      </Container>
+      <Container id='workflowInfo' className='workflowInfo'>
+        <p> Web Development </p>
+        <p> App Development</p>
+        <p> IT Consultant Services</p>
 
-          <Button href='/Services'>Learn more</Button>
-        </Container>
+        <Button style={getButtonStyle} href='/Services'>
+          Learn more
+        </Button>
+      </Container>
 
-        <div className='container-fluid' style={this.workflowTextStyle()}>
-          <br />
-          <Row>
-            <Col xs='3'>
-              <i className='fas fa-comments fa-3x' />
-              <p>Planning - Tell us what you need</p>
-            </Col>
-            <Col xs='3'>
-              <i className='fas fa-pencil-alt fa-3x' />
-              <p>Design - How do you want your website to look and function</p>
-            </Col>
+      <div className='container-fluid' id='container-fluid'>
+        <Row id='row'>
+          <Col xs='3'>
+            <div id='workflow'>
+              <Button className='serviceBtn' href='/Services'>
+                <br />
+                <i className='fas fa-comments fa-2x' />
+                <br />
+                Plan
+              </Button>
+            </div>
+          </Col>
 
-            <Col xs='3'>
-              <i className='fas fa-code fa-3x' />
-              <p>Development - Regular updates during and after developments</p>
-            </Col>
+          <Col xs='3'>
+            <div id='workflow'>
+              <Button className='serviceBtn' href='/Services'>
+                <br />
+                <i className='fas fa-pencil-alt fa-2x' />
+                <br />
+                Design
+              </Button>
+            </div>
+          </Col>
 
-            <Col xs='3'>
-              <i className='fas fa-check-circle fa-3x' />
-              <p>Review - Customer Review Sessions throughout development</p>
-            </Col>
-          </Row>
-        </div>
+          <Col xs='3'>
+            <div id='workflow'>
+              <Button className='serviceBtn' href='/Services'>
+                <br />
+                <i className='fas fa-code fa-2x' />
+                <br />
+                Development
+              </Button>
+            </div>
+          </Col>
+
+          <Col xs='3'>
+            <div id='workflow'>
+              <Button className='serviceBtn' href='/Services'>
+                <br />
+                <i className='fas fa-check-circle fa-2x' />
+                <br />
+                Review
+              </Button>
+            </div>
+          </Col>
+        </Row>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Welcome;

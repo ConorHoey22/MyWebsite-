@@ -40,6 +40,16 @@
     font-size: 12px;
     transform: translate(-0%, 95%);
   }
+
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -81,6 +91,15 @@
     /* font-size: 12px; */
     transform: translate(-0%, 95%);
   }
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
+  }
 }
 
 /* Smartphones (portrait) ----------- */
@@ -121,6 +140,15 @@
     left: 10%;
     font-size: 12px;
     transform: translate(-0%, 95%);
+  }
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
   }
 }
 
@@ -188,6 +216,15 @@
     /* font-size: 12px; */
     transform: translate(-0%, 95%);
   }
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
+  }
 }
 
 /* Large screens ----------- */
@@ -228,6 +265,15 @@
     left: 10%;
     /* font-size: 12px; */
     transform: translate(-0%, 95%);
+  }
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
   }
 }
 
@@ -288,6 +334,16 @@
     font-size: 12px;
     transform: translate(-0%, 95%);
   }
+
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
+  }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
@@ -332,6 +388,16 @@
     left: 10%;
     font-size: 12px;
     transform: translate(50%, 60%);
+  }
+
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
   }
 }
 
@@ -511,5 +577,15 @@ iPad 3
     left: 10%;
 
     transform: translate(-0%, 95%);
+  }
+
+  .container-fluid {
+    position: absolute;
+
+    top: 90%;
+    left: -1%;
+    width: 100%;
+    z-index: 2;
+    font-size: 15px;
   }
 }
